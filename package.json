@@ -1,0 +1,27 @@
+{
+  "name": "studypdf",
+  "private": true,
+  "version": "3.0.0",
+  "description": "StudyPDF — 13 simple PDF tools for students. 100% browser-side processing, Vercel-ready.",
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace client",
+    "build": "node scripts/copy-assets.mjs && npm run build --workspace client",
+    "start": "npm run preview --workspace client",
+    "preview": "npm run preview --workspace client",
+    "samples": "node scripts/make-samples.mjs",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.43.1"
+  },
+  "dependencies": {
+    "docx": "^9.7.1",
+    "pptxgenjs": "^4.0.1"
+  }
+}
